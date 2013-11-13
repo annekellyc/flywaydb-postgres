@@ -1,0 +1,1 @@
+alter table PERSON add column LAST_NAME varchar(100) null;
