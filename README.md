@@ -8,12 +8,16 @@ Prerequisites:
 - Maven 2+
 
 1) Create a maven project using the Maven Archetype Plugin.
+
+```mvn
 > mvn archetype:generate -B -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1 -DgroupId=foo -DartifactId=bar -Dversion=1.0-SNAPSHOT -Dpackage=foobar
+```
 
 2) Import the project to eclipse.
 
 3) Change the pom.xml file to add dependence: flyway and postgresql.
 
+```xml
 <project ...>
     ...
     <dependencies>
@@ -31,10 +35,12 @@ Prerequisites:
     </dependencies>
     ...
 </project>
+```
 
 4) Postgresql database connection (bar/src/main/java/foobar/App.java). 
 I used a local database for the tests. Just change the url, username and password for your database.
 
+```java
 package foobar;
 
 import com.googlecode.flyway.core.Flyway;
@@ -46,11 +52,14 @@ public class App {
 	flyway.migrate();
     }
 }
+```
 
 5) Execute the commands in terminal to compile and run the migrations:
 
+```mvn
 flywaydb-postgres> mvn compile
-flywaydb-postgres> mvn package exec:java -Dexec.mainClass=foobar.App 
+flywaydb-postgres> mvn package exec:java -Dexec.mainClass=foobar.App
+```
 
 
 
