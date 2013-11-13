@@ -54,7 +54,13 @@ public class App {
 }
 ```
 
-5) Execute the commands in terminal to compile and run the migrations:
+5) Create migrations in the directory: src/main/resources/db/migration.
+-> Default format to create sql file for migration:
+	-> V1__filename1.sql (V1 = version 1)
+	-> V2__filename2.sql
+	...
+
+6) Execute the commands in terminal to compile and run the migrations:
 
 ```mvn
 flywaydb-postgres> mvn compile
