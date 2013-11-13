@@ -12,7 +12,7 @@ Prerequisites:
 
 2) Import the project to eclipse.
 
-3) Change the pom.xml file to add dependence: flyway and postgresql.
+3) Change the pom.xml file including dependence flyway and postgresql:
 
 <project ...>
     ...
