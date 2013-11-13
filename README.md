@@ -50,7 +50,7 @@ public class App {
 		Flyway flyway = new Flyway();
 		flyway.setDataSource("jdbc:postgresql://127.0.0.1:5432/database", "username", "password");
 		flyway.migrate();
-    	}
+	}
 }
 ```
 
